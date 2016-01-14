@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin::All Reservations!</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <script>
+	function display()
+	{
+		var confirmationCode= document.getElementById("gConfimation_ID").value;
+		var CustomizedURL= "/api/"+confirmationCode;	
+		document.getElementById("updateButton").addEventListener('click', getData, true );
+		function getData(){
+			var httpRequest = new XMLHttpRequest();
+			httpRequest.open('GET',CustomizedURL, async, username, password)
+		}
+	}
+</script> -->
+  </head>
+<body>
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="Welcome.html">
+	        <img alt="Brand" src="images/Icon-2.png" style="height: 40px; width:40px;">
+	      </a>
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      </div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+	      <ul class="nav nav-pills">
+	        <li><a href="AdminCreateReservationPage.html">New Reservation</a></li>
+	        <li><a href="AdminUpdateReservationPage.html">Update Reservation</a></li>
+	        <li><a href="AdminDeleteReservationPage.html">Cancel Reservation</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+</header>
+<section>
+	<div class="container">
+		<button type="submit" class="btn btn-primary" style="padding: 6px; margin:2px;margin-top:100px;" id="ViewALL" >View ALL Reservations</button>
+		<div class="panel" id="responseData" style="height:auto">
+			<div class="panel-body" style="height:auto" id="respData">
+			</div>
+		</div>	
+	</div>
+		<a href="Welcome.html"> <button class="btn btn-danger" style="float:right; padding: 2px;margin-bottom:100px;">Not Guest? Wanna GO Back?</button></a>		
+</section>		
+<footer>
+	<nav class="navbar navbar-default navbar-fixed-bottom" style="text-align: center;">
+	  		<p class="navbar-text" >EGEN solutions Project -1 by - Sumanth Darisi</p>
+	</nav>
+</footer>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
