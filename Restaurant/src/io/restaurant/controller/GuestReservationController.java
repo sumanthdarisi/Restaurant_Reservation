@@ -84,5 +84,4 @@ public class GuestReservationController{
 			System.out.println("Final Success message");
 			return cancelThisReservation;
 		}
-
 	}

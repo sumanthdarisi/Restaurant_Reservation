@@ -77,7 +77,7 @@ public class AdminReservationAccessController {
 			formData = dao.adminUpdateReservation(confirmationID, formData);
 			return formData;
 	}
-	
+
 	//DELETE reservation
 	@DELETE
 	@Path("/{confirmationID}")

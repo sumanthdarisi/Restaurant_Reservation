@@ -215,7 +215,6 @@ public class GuestReservationDAO {
 					e.printStackTrace();
 				}
 			}
-
 			if(con != null){
 				try {
 					con.close();
