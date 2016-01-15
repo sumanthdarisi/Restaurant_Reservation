@@ -19,28 +19,29 @@ public class AdminReservationAccessDAO {
 	public List<guestModelData> getAllReservationDetails() throws AppException {
 		List<guestModelData> guestReservationList = new ArrayList<guestModelData>();
 		Connection con = DBUtil.Connect();
-		guestModelData data = new guestModelData();;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		try {
 			System.out.println("Conncetion success from DAO");
 			//Connection to Database
-				ps= con.prepareStatement("SELECT * FROM sh1.guestreservationtable;");
+				ps= con.prepareStatement("SELECT *FROM sh1.guestreservationtable;");
 				rs = ps.executeQuery();
 				System.out.println("Query Passed");
 			// Getting the data from database and assigning to model data
 				while(rs.next()){
-				data.setGuest_Confirmationcode(rs.getInt("Guest_ID"));
-				data.setGuest_FirstName(rs.getString("Guest_FName"));
-				data.setGuest_LastName(rs.getString("Guest_LName"));
-				data.setGuest_Email(rs.getString("Guest_Email"));
-				data.setGuest_Mobile(rs.getString("Guest_Mobile"));
-				data.setGuest_PartySize(rs.getInt("Guest_PartySize"));
-				//data.setGuest_PartyDate(rs.getDate("Guest_PartyDate"));
-				data.setGuest_PartyTime(rs.getTime("Guest_PartyTime"));
-			//added to list and returned
-				guestReservationList.add(data);
+					guestModelData data = new guestModelData();
+					data.setGuest_Confirmationcode(rs.getInt("Guest_ID"));
+					data.setGuest_FirstName(rs.getString("Guest_FName"));
+					data.setGuest_LastName(rs.getString("Guest_LName"));
+					data.setGuest_Email(rs.getString("Guest_Email"));
+					data.setGuest_Mobile(rs.getString("Guest_Mobile"));
+					data.setGuest_PartySize(rs.getInt("Guest_PartySize"));
+					//data.setGuest_PartyDate(rs.getDate("Guest_PartyDate"));
+					data.setGuest_PartyTime(rs.getTime("Guest_PartyTime"));
+				//added to list and returned
+					guestReservationList.add(data);
 				}
+				
 		} catch (SQLException e) {
 			System.out.println("Conncetion FAILED from DAO");
 			System.out.println(e);
